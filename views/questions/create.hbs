@@ -1,0 +1,39 @@
+
+<h3>{{viewTitle}}</h3>
+
+<form action="/questions" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{questions._id}}">
+    <div class="form-group">
+        <label>Question</label>
+        <input type="text" class="form-control" name="question" placeholder="Question" value="{{questions.question}}">
+        <div class="text-danger">
+            {{questions.questionError}}</div>
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Choice 1</label>
+            <input type="text" class="form-control" name="a" placeholder="Choice 1" value="{{questions.a}}">
+             <div class="text-danger">
+            {{questions.aError}}</div>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Choice 2</label>
+            <input type="text" class="form-control" name="b" placeholder="Choice 2" value="{{questions.b}}">
+             <div class="text-danger">
+            {{questions.bError}}</div>
+        </div>
+    </div>
+
+     <div class="form-group">
+        <label>Answer</label>
+        <input type="text" class="form-control" name="answer" placeholder="Answer" value="{{questions.answer}}">
+        <div class="text-danger">
+            {{questions.answerError}}</div>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/questions/qlist"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
